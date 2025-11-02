@@ -1,0 +1,161 @@
+:root {
+  --bg: linear-gradient(135deg, #00b4db, #0083b0);
+  --card: rgba(255, 255, 255, 0.15);
+  --text: #fff;
+  --button: #ffeb3b;
+  --button-hover: #ffc107;
+}
+
+body.dark {
+  --bg: linear-gradient(135deg, #1a1a1a, #333);
+  --card: rgba(0, 0, 0, 0.4);
+  --text: #eee;
+  --button: #4caf50;
+  --button-hover: #2e7d32;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 480px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 🌗 Tombol Mode Gelap tanpa tulisan tambahan */
+#toggleTheme {
+  background: #ffeb3b;
+  color: #000;
+  border: 2px solid #000;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  z-index: 10;
+}
+
+#toggleTheme:hover {
+  transform: scale(1.05);
+  background: #ffc107;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.search-box {
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  width: 60%;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background: var(--button);
+  color: #333;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 5px;
+}
+
+button:hover {
+  background: var(--button-hover);
+  transform: scale(1.05);
+}
+
+#weatherResult {
+  margin-top: 25px;
+  display: none;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.weather-info img {
+  width: 80px;
+  height: 80px;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.forecast-day {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  width: 30%;
+  font-size: 14px;
+}
+
+.forecast-day img {
+  width: 50px;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}

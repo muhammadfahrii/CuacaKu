@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CuacaKu 🌤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>🌦️ CuacaKu</h1>
+      <button id="toggleTheme">🌙</button>
+    </header>
+
+    <p class="subtitle">Lihat cuaca harian & prakiraan 5 hari ke depan</p>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Masukkan nama kota (contoh: Bandung)" />
+      <button id="getWeatherBtn">Cari</button>
+      <button id="getLocationBtn">📍 Lokasi Saya</button>
+    </div>
+
+    <div id="weatherResult" class="fade-in">
+      <h2 id="cityName"></h2>
+      <div class="weather-info">
+        <img id="icon" src="" alt="Ikon Cuaca" />
+        <div>
+          <p id="temperature"></p>
+          <p id="humidity"></p>
+          <p id="description"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="forecastContainer" class="forecast"></div>
+
+    <footer>
+      <p>🪶 Dibuat oleh <b>Fahri</b> | Data dari OpenWeatherMap</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
